@@ -14,16 +14,16 @@
         };
         
         self.contacts = {
-            phone: '+38(063) 115 31 84',
-            email: 'artemshilay@gmail.com',
+            phone: 'number',
+            email: 'email',
             website: 'http://ms.p.ht/',
-            skype: 'artemshilay'
+            skype: 'skype'
         };
         
         self.social = {
-            twitter: 'https://twitter.com/ashylai',
-            facebook: 'http://www.facebook.com/artem.shilay',
-            linkedin: 'http://www.linkedin.com/profile/view?id=73988905&trk=tab_pro/'            
+            twitter: 'https://twitter.com/',
+            facebook: 'http://www.facebook.com/',
+            linkedin: 'http://www.linkedin.com/'            
         };
         
         self.description = {
