@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>UWC III | Artem Shylai | FE 1-</title>
+	<meta name="description" content="UWC III final battle">
+	<meta name="author" content="Artem Shylai">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicon
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+</head>
+<body>
+	<!-- Primary Page Layout
+	================================================== -->	
+
+    <div class="container">
+        <div id="header" class="sixteen columns">
+            <div class="nine columns" data-bind="with: greeting">
+                <h1 class="remove-bottom" style="margin-top: 40px" data-bind="text: name"></h1>
+                <h5 data-bind="text: greeting"></h5>
+                <hr />
+            </div>
+            <div class="four columns personal-contacts" data-bind="with: contacts">
+                <ul>
+                    <li><span>phone:</span>  <span data-bind="text: phone"></span></li>
+                    <li><span>website:</span>  <a data-bind="attr: {href: website}">personal profile</a></li>
+                    <li><span>email:</span>  <a data-bind="attr: {href: ('mailto:' + email)}, text: email"></a></li>
+                    <li><span>skype:</span>  <span data-bind="text: skype"></span></li></li> 
+                </ul>
+
+            </div>
+            <div class="two columns photo">
+                <img class="photo-img" alt="Artem Shylai photo" src="img/photo.jpg">
+            </div>
+        
+        </div>
+        
+        <div id="personal-description" data-bind="with: description">
+            
+            <div class="one-third column">
+                <h3 data-bind="text: who.title"></h3>
+                <p data-bind="text: who.text"></p>           
+            </div>
+
+            <div class="one-third column">
+                <h3 data-bind="text: why.title"></h3>
+                <ul class="hire" data-bind="foreach: why.text">
+                    <li data-bind="text: $data"></li>
+                </ul>
+            </div>
+
+            <div class="one-third column">
+                <h3 data-bind="text: benefits.title"></h3>
+                <p data-bind="text: benefits.text"></p>
+            </div>
+            
+        </div><!-- personal-description -->
+        
+        
+        <div id="prof-description" class="sixteen columns">
+            <div class="seven columns">
+                <div class="education" data-bind="with: education">
+                    <h3 data-bind="text: title"></h3>
+                    <hr>
+                    <h4 data-bind="text: univercity"></h4>
+                    <p data-bind="text: department"></p>
+                    <p data-bind="text: degree"></p>
+                </div>
+                
+                <div class="skills" data-bind="with: skills">
+                    <h3 data-bind="text: title"></h3>
+                    <hr>
+                    
+                    <h4 data-bind="text: core.title"></h4>
+                    
+                    <ul data-bind="foreach: core.skills">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                    
+                    <h4 data-bind="text: libs.title"></h4>
+                    
+                    <ul data-bind="foreach: libs.skills">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="eight columns" data-bind="with: experience">
+                <h3 data-bind="text: $root.experience.title"> </h3>
+                <hr>
+                <div data-bind="foreach: jobs">
+                <div class="job">
+                    <h4 data-bind="text: company"></h4>
+                    <h5 data-bind="text: position"></h5>
+                    <ul data-bind="foreach: responsibility">
+                        <li data-bind="text: $data"></li>
+                    </ul>
+                </div>
+                </div>
+                
+                 
+            </div>
+               
+        </div><!-- prof-description -->
+        
+        <hr>
+        
+        <div id="footer" class="sixteen columns">
+            <p id="copyright" class="five columns">
+                Copyright © 2012 Artem Shylai
+            </p>
+            
+            <div id="social"  class="six columns" data-bind="with: social">
+                <span class="follow-text">Follow me via social net: </span>
+                <div class="social-net">                    
+                    <a data-bind="attr: {href: twitter}">
+                        <img alt="facebook icon" src="img/t.png">
+                    </a>
+                </div >
+                <div class="social-net">                    
+                    <a data-bind="attr: {href: facebook}">
+                        <img alt="facebook icon" src="img/fb.png">
+                    </a>
+                </div>
+                <div class="social-net">                    
+                    <a data-bind="attr: {href: linkedin}">
+                        <img alt="facebook icon" src="img/in.png">
+                    </a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="downloads" class="four columns">
+                <span class="follow-text">Download CV: </span>
+                <a class="file" href="files/cv-pdf.pdf">
+                    <img alt="save in pdf" src="img/pdf.png"/>
+                </a>
+                <a class="file" href="files/cv-word.doc">
+                    <img alt="save in doc"  src="img/word.png"/>
+                </a>
+            </div>
+            
+        </div><!-- footer -->
+
+    </div><!-- container -->
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/knockout-2.2.0.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+<!-- End Document
+================================================== -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* 
+    Document   : styles
+    Created on : Nov 24, 2012, 11:50:37 PM
+    Author     : Artem.Shylai
+    Description:
+        Stylesheet provides custom css rules for the index.html page.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background: url('../img/bg.jpg') repeat;
+}
+
+h4, h5 {
+    color: #404040;
+}
+
+/** Header styles */
+#header {
+    margin-bottom: 20px;
+}
+
+.photo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px !important;
+    width: auto;
+}
+.photo-img {
+    border: 5px solid #CCC;
+    display: block;
+    margin: 0 auto;
+}
+.phone-contact {
+    margin-top: 20px;
+}
+.personal-contacts {
+    margin-top: 25px;
+    width: auto;
+}
+.hire {
+    list-style: disc;
+    padding: 0px 20px;
+}
+
+#prof-description {
+    margin-top: 20px;
+}
+
+
+.social-net {
+    float: left;
+    margin-left: 20px;
+}
+
+#copyright {
+    margin-top: 10px;
+}
+
+.follow-text {
+    line-height: 38px;
+    float: left;
+}
+
+.file {
+    margin-left: 15px;
+}
